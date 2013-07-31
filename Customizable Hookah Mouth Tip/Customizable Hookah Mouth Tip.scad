@@ -44,7 +44,7 @@ mouth_side_inner_diameter = 7;
 
 /* [Hidden] */
 
-$fn = 50;
+$fn = 100;
 
 difference()
 {
