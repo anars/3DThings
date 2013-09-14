@@ -17,7 +17,9 @@
  *
  */
 
-thickness = 25;
+thickness = 10;
+
+padding = 1;
 
 module pawn()
 {
@@ -50,17 +52,6 @@ module bishop()
 	}
 }
 
-module king()
-{
-	union()
-	{
-		cube([thickness, thickness, thickness * 3]);
-			translate([0, thickness / 2, thickness * 3 - sqrt(pow(thickness, 2) / 4)])
-				rotate(a=[45,0,0])
-			cube([thickness, sqrt(pow(thickness, 2) / 2), sqrt(pow(thickness, 2) / 2)]);
-	}
-}
-
 module queen()
 {
 	difference()
@@ -72,37 +63,54 @@ module queen()
 	}
 }
 
+module king()
+{
+	union()
+	{
+		cube([thickness, thickness, thickness * 3]);
+			translate([0, thickness / 2, thickness * 3 - sqrt(pow(thickness, 2) / 4)])
+				rotate(a=[45,0,0])
+			cube([thickness, sqrt(pow(thickness, 2) / 2), sqrt(pow(thickness, 2) / 2)]);
+	}
+}
 
 module set()
 {
 	for ( i = [0 : 7] )
-		translate([thickness * i + i, thickness + 1, 0])
+		translate([thickness * i + (i * padding), thickness + padding, 0])
 			pawn();
 
-	translate([thickness * 0 + 0, 0, 0])
+	translate([thickness * 0 + (0 * padding), 0, 0])
 		rock();
 
-	translate([thickness * 1 + 1, 0, 0])
+	translate([thickness * 1 + (1 * padding), 0, 0])
 		knight();
 
-	translate([thickness * 2 + 2, 0, 0])
+	translate([thickness * 2 + (2 * padding), 0, 0])
 		bishop();
 
-	translate([thickness * 3 + 3, 0, 0])
+	translate([thickness * 3 + (3 * padding), 0, 0])
 		queen();
 
-	translate([thickness * 4 + 4, 0, 0])
+	translate([thickness * 4 + (4 * padding), 0, 0])
 		king();
 
-	translate([thickness * 5 + 5, 0, 0])
+	translate([thickness * 5 + (5 * padding), 0, 0])
 		bishop();
 
-	translate([thickness * 6 + 6, 0, 0])
+	translate([thickness * 6 + (6 * padding), 0, 0])
 		knight();
 
-	translate([thickness * 7 + 7, 0, 0])
+	translate([thickness * 7 + (7 * padding), 0, 0])
 		rock();
 
 }
 
 set();
+
+// pawn();
+// rock();
+// knight();
+// bishop();
+// queen();
+// king();
