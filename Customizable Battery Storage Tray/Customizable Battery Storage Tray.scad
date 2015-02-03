@@ -1,6 +1,6 @@
 /*
  * Customizable Battery Storage Tray
- * Copyright (c) 2013 Anar Software LLC. < http://anars.com >
+ * Copyright (c) 2013-2015 Anar Software LLC. < http://anars.com >
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -19,22 +19,25 @@
 /* [Global] */
 
 // Battery Type
-battery_type = "A"; // [AAA, AA, C, D, 1/2AA, AAAA, A, B, F, N, NO. 6, SUB-C, A23, A27, DUPLEX, 4SR44, 523, 531, CR123A, CR2]
+battery_type = "AA"; // [AAA, AA, C, D, 1/2AA, AAAA, A, B, F, N, NO. 6, SUB-C, A23, A27, DUPLEX, 4SR44, 523, 531, CR123A, CR2]
 
 // Depth of a battery hole (mm)
 depth_of_hole = 20;
 
 // Thickness of the bottom (mm)
-thickness_of_bottom = 2;
+thickness_of_bottom = 5;
 
 // Number of batteries in a row
 number_of_rows = 3;
 
 // Number of batteries in a column
-number_of_column = 5;
+number_of_column = 4;
 
 // Thickness of the edges (mm)
-thickness_of_edges = 4;
+thickness_of_edges = 5;
+
+// Enlarge battery hole by (mm)
+hole_enlargement_amount = 1;
 
 /* [Hidden] */
 
@@ -64,7 +67,7 @@ batteries =
 
 $fn = 100;
 
-battery_diameter = batteries[search([battery_type], batteries)[0]][1] + 1;
+battery_diameter = batteries[search([battery_type], batteries)[0]][1] + hole_enlargement_amount;
 
 difference()
 {
