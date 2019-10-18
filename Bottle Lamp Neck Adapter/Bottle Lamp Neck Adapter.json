@@ -1,0 +1,15 @@
+{
+    "parameterSets": {
+        "Standard Wine Bottle": {
+            "$fa": "12",
+            "$fn": "0",
+            "$fs": "2",
+            "adapter_body_height": "20",
+            "adapter_head_height": "5",
+            "bottle_neck_inner_diameter": "18",
+            "bottle_neck_outer_diameter": "30",
+            "threaded_rod_diameter": "11"
+        }
+    },
+    "fileFormatVersion": "1"
+}

@@ -1,0 +1,11 @@
+{
+    "parameterSets": {
+        "Standard Cube": {
+            "$fa": "12",
+            "$fn": "0",
+            "$fs": "2",
+            "cube": "57"
+        }
+    },
+    "fileFormatVersion": "1"
+}

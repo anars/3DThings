@@ -1,0 +1,18 @@
+{
+    "parameterSets": {
+        "design default values": {
+            "$fa": "12",
+            "$fn": "0",
+            "$fs": "2",
+            "batteries": "[[\"AAA\", 10.5], [\"AA\", 14.5], [\"C\", 26.2], [\"D\", 34.2], [\"1\/2AA\", 14.5], [\"AAAA\", 8.3], [\"A\", 17], [\"B\", 21.5], [\"F\", 33], [\"N\", 12], [\"NO. 6\", 67], [\"SUB-C\", 22.2], [\"A23\", 10.3], [\"A27\", 8], [\"DUPLEX\", 21.8], [\"4SR44\", 13], [\"523\", 17.1], [\"531\", 17.1], [\"CR123A\", 17], [\"CR2\", 15.6]]",
+            "battery_type": "AA",
+            "depth_of_hole": "20",
+            "hole_enlargement_amount": "1",
+            "number_of_column": "4",
+            "number_of_rows": "3",
+            "thickness_of_bottom": "5",
+            "thickness_of_edges": "5"
+        }
+    },
+    "fileFormatVersion": "1"
+}

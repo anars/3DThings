@@ -1,6 +1,6 @@
 /*
  * Customizable Battery Storage Tray
- * Copyright (c) 2013-2015 Anar Software LLC. < http://anars.com >
+ * Copyright (c) 2013-2019 Anar Software LLC. < http://anars.com >
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -18,6 +18,7 @@
 
 /* [Global] */
 
+/* [Tray Settings] */
 // Battery Type
 battery_type = "AA"; // [AAA, AA, C, D, 1/2AA, AAAA, A, B, F, N, NO. 6, SUB-C, A23, A27, DUPLEX, 4SR44, 523, 531, CR123A, CR2]
 
@@ -39,8 +40,15 @@ thickness_of_edges = 5;
 // Enlarge battery hole by (mm)
 hole_enlargement_amount = 1;
 
-/* [Hidden] */
+/* [Facets Settings] */
+// Minimum angle for a fragment
+$fa = 12;
+// Minimum size of a fragment
+$fs = 2;
+// Number of fragments
+$fn = 0;
 
+/* [Hidden] */
 batteries =
 [
 	["AAA", 10.5],
@@ -64,8 +72,6 @@ batteries =
 	["CR123A", 17],
 	["CR2", 15.6]
 ];
-
-$fn = 100;
 
 battery_diameter = batteries[search([battery_type], batteries)[0]][1] + hole_enlargement_amount;
 

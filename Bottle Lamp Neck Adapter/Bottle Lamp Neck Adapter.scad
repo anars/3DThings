@@ -1,6 +1,6 @@
 /*
- * Customizable Bottle Lamp Neck Adapter
- * Copyright (c) 2013 Anar Software LLC. < http://anars.com >
+ * Bottle Lamp Neck Adapter
+ * Copyright (c) 2013-2019 Anar Software LLC. < http://anars.com >
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -18,6 +18,7 @@
 
 /* [Global] */
 
+/* [Adapter Settings] */
 // Bottle neck inner diameter (mm)
 bottle_neck_inner_diameter = 18;
 
@@ -33,9 +34,15 @@ adapter_body_height = 20;
 // Threaded rod diameter (mm)
 threaded_rod_diameter = 11;
 
-/* [Hidden] */
+/* [Facets Settings] */
+// Minimum angle for a fragment
+$fa = 12;
+// Minimum size of a fragment
+$fs = 2;
+// Number of fragments
+$fn = 0;
 
-$fn = 100;
+/* [Hidden] */
 
 difference()
 {

@@ -1,6 +1,6 @@
 /*
  * ZipTire - Tire Traction Tie For Snow And Sand
- * Copyright (c) 2016 Anar Software LLC. < http://anars.com >
+ * Copyright (c) 2016-2019 Anar Software LLC. < http://anars.com >
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -50,8 +50,6 @@ hole_width  = 10;
 band_lenght = floor((max_length - (tie_width + stud_bottom) * 2) / (stud_bottom * 2 + stud_gap)) * (stud_bottom * 2 + stud_gap) + ((tie_width + stud_bottom) * 2 );
 
 number_of_studs = (band_lenght - (tie_width + stud_bottom) * 2) / (stud_bottom * 2 + stud_gap);
-
-$fn = 100;
 
 difference()
 {

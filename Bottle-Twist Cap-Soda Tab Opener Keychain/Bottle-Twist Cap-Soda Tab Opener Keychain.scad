@@ -1,6 +1,6 @@
 /*
  * Bottle - Twist Cap - Soda Tab Opener Keychain
- * Copyright (c) 2013 Anar Software LLC. < http://anars.com >
+ * Copyright (c) 2013-2019 Anar Software LLC. < http://anars.com >
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -16,7 +16,17 @@
  *
  */
 
-$fn = 100;
+/* [Global] */
+
+/* [Facets Settings] */
+// Minimum angle for a fragment
+$fa = 12;
+// Minimum size of a fragment
+$fs = 2;
+// Number of fragments
+$fn = 0;
+
+/* [Hidden] */
 
 difference()
 {
